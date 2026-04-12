@@ -8,15 +8,16 @@ package com.mycompany.prog56121part1;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-//NJABULO SHANDU ST-10518194
+
 /**
  *
  * @author KoMkh
- */ 
+ */
 public class PROG56121PART1 {
-    //NJABULO SHANDU ST-10518194
+    //NJABULO SHANDU ST10518194
+    
     static Scanner input = new Scanner(System.in);
-   //NJABULO SHANDU ST-10518194 
+    
                         //  Static Methods 
 
     // Check if username contains "_" and max 5 characters
@@ -50,7 +51,7 @@ public class PROG56121PART1 {
         }
         return "Username and password successfully captured. User registered!";
     }
-
+//NJABULO SHANDU ST10518194
     // Login user by checking stored username and password
     
     public static boolean loginUser(String username, String password, String storedUsername, String storedPassword) {
@@ -66,7 +67,7 @@ public class PROG56121PART1 {
             return "Username or password incorrect, please try again.";
         }
     }
-//NJABULO SHANDU ST-10518194
+
                             //  Main Method 
     
     public static void main(String[] args) {
@@ -86,7 +87,7 @@ public class PROG56121PART1 {
             if (checkUserName(username)) break;
             System.out.println("Invalid username. Example: user_");
         }
-//NJABULO SHANDU ST-10518194
+
         // Loop until valid password
         
         String password;
@@ -115,7 +116,7 @@ public class PROG56121PART1 {
             }
             System.out.println("Invalid number. Must start with +27 and have 9 digits. Example: +27123456789");
         }
-//NJABULO SHANDU ST-10518194
+
         //  Login Section 
         
         System.out.println("\nLogin");
@@ -136,11 +137,11 @@ public class PROG56121PART1 {
             System.out.println(PROG56121PART1.returnLoginStatus(status));
 
             if (status) break; // stop loop on successful login
-           //NJABULO SHANDU ST-10518194
+          //NJABULO SHANDU ST10518194 
         }
     }
 }
-  
+    
        
        
       
