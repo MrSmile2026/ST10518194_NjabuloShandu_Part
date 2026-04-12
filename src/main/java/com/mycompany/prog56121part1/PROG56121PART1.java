@@ -1,9 +1,9 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-//NJABULO SHANDU ST-10518194
+
 package com.mycompany.prog56121part1;
-//NJABULO SHANDU ST-10518194
+
 //import necesary classes for input handling  and regex pattern matching
 import java.util.Scanner;
 import java.util.regex.Pattern;
