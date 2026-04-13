@@ -12,7 +12,6 @@ import static org.junit.jupiter.api.Assertions.*;
 public class PROG56121PART1IT {
 
 
-   
     private static Object returnLoginStatus(boolean b) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
