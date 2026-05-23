@@ -18,7 +18,7 @@ import java.util.regex.Pattern;
  *
  * @author KoMkh
  */
-
+//NJABULO SHANDU ST 10518194 PROG POE
 // Define a Message class to store message attributes
 class Message {
     String id;
@@ -39,7 +39,7 @@ public Message(String id, String hash, String recipient, String content, String 
     }
 }
 
-
+//NJABULO SHANDU ST 10518194 PROG POE
 public class PROG56121PART1 {
 // List to store message
     static ArrayList<Message> messages = new ArrayList<>();
@@ -103,7 +103,7 @@ public class PROG56121PART1 {
         return "Recipient number enterd successfully"; // correct number
     }
     
-    
+//NJABULO SHANDU ST 10518194 PROG POE    
     public static String createMessageHash(String id, int num, String msg) {
         String[] words = msg.trim().split(" ");
         String first = words.length > 0 ? words[0] : "MSG";
@@ -154,7 +154,7 @@ public class PROG56121PART1 {
             }
         }
     }
-    
+   
     
     
 // Method to register a new user and return their credentials
@@ -184,8 +184,9 @@ public class PROG56121PART1 {
             }
             System.out.println("Invalid number. Must start with +27 and have 9 digits. Example: +27123456789");
         }
+     
     
-  
+//NJABULO SHANDU ST 10518194 PROG POE  
 // Display registration message and return credentials
     System.out.println(registerUser(username, password));
     return new String[] {username, password};
@@ -237,7 +238,7 @@ public static void login(String[] credentials) {
     }
     
     
-    
+//NJABULO SHANDU ST 10518194 PROG POE    
 // Method to send a message
     public static void sendMessage() {
         if (sentCount >= messageLimit) {
@@ -323,7 +324,7 @@ public static void login(String[] credentials) {
     }
     
     
-    
+ //NJABULO SHANDU ST 10518194 PROG POE   
 // Method to save and exit
     public static void saveAndExit() {
         String save;
