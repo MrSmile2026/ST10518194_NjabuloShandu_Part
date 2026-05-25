@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.regex.Pattern;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -234,7 +235,7 @@ public static void login(String[] credentials) {
         System.out.println("4. Save Messages");
         System.out.println("5. Quit");
         System.out.println("~~~~~~~~~~~~~~");
-        System.out.print("Choose option: ");
+        System.out.print("Choose option(1-5): ");
     }
     
     
@@ -253,22 +254,38 @@ public static void login(String[] credentials) {
             System.out.println("[ERROR] " + validation); // show error
             return;
         }
+        String usernameUser;
+    while (true) {
+        System.out.print("Enter Recipient Username (must contain '_' and max 5 chars): ");
+        usernameUser = input.nextLine();
+        if (checkUserName(usernameUser)) break;
+        System.out.println("Invalid Recipient username. Example: User_");
+    }
+    
         System.out.print("Enter Message (max 250 chars): ");
-        String msg = input.nextLine();
-        if (msg.length() > 250) {
-            System.out.println("[ERROR] Message exceed 250 characters![Pleas reduce the size]");
-            return;
+String msg = input.nextLine();
+if (msg.length() > 250) {
+    int excessChars = msg.length() - 250;
+    int excessWords = msg.substring(250).split("\\s+").length;
+    System.out.println("[ERROR] Message exceeds 250 characters by " + excessChars + " characters (" + excessWords + " words). [Please reduce the size]");
+    return;
+
         }
         String id = String.format("%010d", (long) (Math.random() * 10000000000L));
         String hash = createMessageHash(id, sentCount, msg);
         Message message = new Message(id, hash, rec, msg, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()), "SENT");
         messages.add(message);
         sentCount++;
-        System.out.println("\n[SUCCESS] Message successfully sent");
-        System.out.println("ID : " + id);
+        System.out.println("\n.............MESSAGE DETAILSK..................");
+       
+        System.out.println("MESSAGE ID : " + id);
+        System.out.println("RECIPIENT NUMBER : "+ rec);
+        System.out.println("RECIPIENT USERNAME :" + usernameUser);
+        System.out.println("MESSAGE : " + msg);
         System.out.println("HASH : " + hash);
         System.out.println("TIME : " + message.timestamp);
-        System.out.println("DATA: " + msg + " | Recipient Number: " + rec);
+        System.out.println("Message successfully sent");
+        System.out.println("\n...............................");
     }
     
     
@@ -291,12 +308,12 @@ public static void login(String[] credentials) {
 // Method to discard the last message
     public static void discardLastMessage() {
         if (messages.isEmpty()) {
-            System.out.println("[INFO] No messages to discard.");
+            System.out.println(" No messages to discard.");
             return;
         }
         Message lastMessage = messages.remove(messages.size() - 1);
         sentCount--;
-        System.out.println("[SUCCESS] Message discarded: " + lastMessage.content);
+        System.out.println(" Message discarded: " + lastMessage.content);
     }
     
     
@@ -317,7 +334,7 @@ public static void login(String[] credentials) {
                 file.write(" }" + (i < messages.size() - 1 ? "," : "") + "\n");
             }
             file.write("]");
-            System.out.println("\n[SUCCESS] Messages successfully stored.");
+            System.out.println("\n Messages successfully stored.");
         } catch (IOException e) {
             System.out.println("[ERROR] Failed to save file!");
         }
@@ -345,8 +362,8 @@ public static void login(String[] credentials) {
     System.out.println("Goodbye!"); // exit msg
     return; // end program
     }
-
-    
+  
+ 
 }
   
        
