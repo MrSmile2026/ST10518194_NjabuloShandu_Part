@@ -1,10 +1,50 @@
 [
- {
- "id": "3215582700",
- "hash": "32:0:THETALK",
- "recipient": "+27837822516",
- "message": "the new wave is here so let talk",
- "status": "SENT",
- "time": "2026-05-25 23:35:40"
- }
+  {
+    "id": "0686474181",
+    "hash": "06:0:DID?",
+    "recipient": "+27834557896",
+    "message": "Did you get the cake ?",
+    "status": "Sent",
+    "time": "2026-06-01 15:10:12"
+  },
+  {
+    "id": "0741283655",
+    "hash": "07:1:WHERETIME.",
+    "recipient": "+27838884567",
+    "message": "Where are you? You are late! i have asked you to be oon time.",
+    "status": "Stored",
+    "time": "2026-06-01 15:14:48"
+  },
+  {
+    "id": "5727262294",
+    "hash": "57:2:YOHOOOO,GATE",
+    "recipient": "+27834484567",
+    "message": "Yohoooo, i am at your gate",
+    "status": "Disregard",
+    "time": "2026-06-01 15:16:52"
+  },
+  {
+    "id": "3547636744",
+    "hash": "35:3:IT!",
+    "recipient": "+27838884567",
+    "message": "It is dinner time !",
+    "status": "Sent",
+    "time": "2026-06-01 15:18:55"
+  },
+  {
+    "id": "8021917415",
+    "hash": "80:4:OK,YOU",
+    "recipient": "+27838884567",
+    "message": "Ok, I am leaving without you",
+    "status": "Stored",
+    "time": "2026-06-01 15:20:50"
+  },
+  {
+    "id": "3875257719",
+    "hash": "38:5:THECODE",
+    "recipient": "+27786802214",
+    "message": "The end of the good running code",
+    "status": "Disregard",
+    "time": "2026-06-01 15:31:48"
+  }
 ]
